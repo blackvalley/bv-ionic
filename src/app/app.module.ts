@@ -6,6 +6,7 @@ import { FeedPage } from '../pages/feed/feed';
 import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
+import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 
 // Import the AF2 Module
@@ -29,6 +30,7 @@ messagingSenderId: "609067141823"
     CommunityPage,
     EventsPage,
     ConnectionsPage,
+    ProfilePage,
     TabsPage
   ],
   imports: [
@@ -43,6 +45,7 @@ messagingSenderId: "609067141823"
     CommunityPage,
     EventsPage,
     ConnectionsPage,
+    ProfilePage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

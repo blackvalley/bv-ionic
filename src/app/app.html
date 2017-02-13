@@ -1,36 +1,5 @@
 
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <ion-content>
-
-
-    <ion-item>
-        <img class="user-pic" src="BlackValley-2.jpg" width="150" height="150" alt="avatar">
-      <span class="item-content">
-        <h1>Peter Carlsson</h1>
-        <p>Brunch this weekend?</p>
-      </span>
-    </ion-item>
-
-    <ion-item id="pro-btn">
-      <button ion-button full (click)="openpage(ConnectionsPage)"> Connections # </button>
-      <button ion-button full (click)="openpage(EventsPage)"> View Profile </button>
-
-      <div id="pro-btn2">
-      <button ion-button icon-right> Settings </button>
-      <button ion-button icon-middle> Feedback </button>
-      <button ion-button icon-left> Sign out </button>
-      </div>
-    </ion-item>
-  </ion-content>
-
-
-</ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

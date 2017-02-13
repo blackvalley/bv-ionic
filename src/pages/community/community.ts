@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-community',
@@ -8,7 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class CommunityPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor() {
 
   }
 
