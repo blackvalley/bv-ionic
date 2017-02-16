@@ -6,15 +6,27 @@ page-home {
   position: absolute;
   top: 0;
   right: 0;
-
    }
 
-#Welcome {
-  float: left;
-
+#card {
+  box-shadow: 0 0 3px 2px #000;
+  background-color: lightgray;
   }
+#card img {
+  border: 2px solid black;
+}
+
+#card ion-item {
+  background-color: #000000;
+  color: #C6E947;
+}
+
+#card ion-note {
+  color: #000000;
+
+}
+
 
 
 
 }
-
