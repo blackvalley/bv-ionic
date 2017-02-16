@@ -8,6 +8,7 @@ import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+import { Data } from '../providers/data';
 
 // Import the AF2 Module
 import { AngularFireModule } from 'angularfire2';
@@ -48,6 +49,6 @@ messagingSenderId: "609067141823"
     ProfilePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Data]
 })
 export class AppModule {}

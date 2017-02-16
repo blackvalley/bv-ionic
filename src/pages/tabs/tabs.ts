@@ -6,7 +6,6 @@ import { CommunityPage } from '../community/community';
 import { EventsPage } from '../events/events';
 import { ProfilePage } from '../profile/profile';
 
-
 @Component({
   templateUrl: 'tabs.html'
 })
