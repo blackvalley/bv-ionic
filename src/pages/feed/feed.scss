@@ -4,5 +4,41 @@ page-feed {
     margin-left: 50px;
   }
 
+  #feed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  #user-post {
+    min-height: 90px;
+    background-color: lightgray;
+    border: 1px solid #000000;
+
+  }
+
+  #user-img {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border-radius: 80px;
+    border: 3px solid #000000;
+    background-color: white;
+    width: 70px;
+    height: 60px;
+
+  }
+
+  #user-info {
+    position: absolute;
+    left: 90px;
+    top: 13px;
+  }
+
+  #user-btn {
+    position: absolute;
+    top: 55px;
+  }
 
 }
