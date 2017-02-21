@@ -16,14 +16,14 @@ page-profile {
 #profile-img {
   border-radius: 80px;
   border: 3px solid #000000;
-  margin: 10px 0 0 80px;
+  margin: 10px 0 0 85px;
   width: 140px;
   height: 120px;
 }
 
 #profile-info {
-
   display: block;
+  text-align: center;
 }
 
 #profile-back {
@@ -36,15 +36,12 @@ page-profile {
   margin-top: 65px;
   /*     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/94311/bg.jpg') no-repeat transparent;*/
 
-
 #profile-btn {
   display: block;
   margin-top: 80px;
 
 }
 
-
 }
-
 
 }
