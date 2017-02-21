@@ -1,0 +1,47 @@
+<!--
+  Generated template for the Profile page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <img src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/bv-logo.png?alt=media&token=edcd44fd-6479-4764-89ff-3df661724f92" width="80" height="40"/>
+    <ion-title >Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item >
+    <div id="profile-card">
+        <ion-item id="profile-back">
+          <img id="profile-img" src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/BlackValley-2.jpg?alt=media&token=425be727-9c17-45d2-a824-8a9038a9dcf7" alt="avatar">
+        </ion-item>
+          <div id="profile-info">
+            <h2 id="profile-name">Dakari Franklin</h2>
+            <span id="profile-description">
+              <p>Morehouse College'16</p>
+              <p>Physics</p>
+              <p>Dallas Area</p>
+            </span>
+          </div>
+        </div>
+  </ion-item>
+
+
+  <div id="profile-btn">
+  <ion-item id="pro-btn">
+    <button  ion-button full (click)="launchConnPage()"> Connections # </button>
+  </ion-item>
+
+    <ion-item id="pro-btn2">
+      <button ion-button icon-right> Settings </button>
+      <button ion-button icon-middle> Feedback </button>
+      <button ion-button icon-left> Sign out </button>
+    </ion-item>
+  </div>
+
+</ion-content>

@@ -1,11 +1,32 @@
 
 page-home {
+
+
+#hp-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+   }
+
+#card {
+  box-shadow: 0 0 3px 2px #000;
+  background-color: lightgray;
+  }
+#card img {
+  border: 2px solid black;
 }
 
-.searchbar {
-margin: 0px;
+#card ion-item {
+  background-color: #000000;
+  color: #C6E947;
 }
 
-img {
-  margin: -25px 0 -10px 40px;
+#card ion-note {
+  color: #000000;
+
+}
+
+
+
+
 }

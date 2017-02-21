@@ -1,8 +1,7 @@
 <ion-header>
-  <ion-navbar color="dark">
-    <button ion-button menuToggle>
-      <ion-icon name="contact"></ion-icon>
-    </button>
+  <ion-navbar>
+    <img src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/bv-logo.png?alt=media&token=edcd44fd-6479-4764-89ff-3df661724f92" width="80" height="40"/>
+
     <ion-title>
       The Feed
     </ion-title>
@@ -11,20 +10,33 @@
 
 <ion-content padding="true" class="has-header">
 
-  <ion-list can-swipe="true">
-
-    <ion-item class="button-item-right item-avatar" no-ripple>
-                <span class="item-content">
-                    <img src="http://ionicframework.com/img/docs/mcfly.jpg">
-                  <h2> Alex Nelson </h2>
-                  <p> I've been working on this Code all day</p>
-                    <button class="button button-balanced show-ripple"> Like </button>
-                    <button class="button button-balanced show-ripple"> Comment </button>
-                </span>
+  <ion-list can-swipe="true" id="feed">
+    <ion-item id="user-post">
+      <ion-row>
+        <ion-col>
+          <img id="user-img" src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/BlackValley.jpg?alt=media&token=7b0300e1-cc87-4b3e-91d7-ac42a41755ce">
+        </ion-col>
+        <ion-col id="user-info">
+          <h2> Paul Hammond </h2>
+          <p> I've been working on this Code all day</p>
+        </ion-col>
+      </ion-row>
+      <ion-row id="user-btn">
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+      </ion-row>
     </ion-item>
 
   </ion-list>
 
 </ion-content>
-
-

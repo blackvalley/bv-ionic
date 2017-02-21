@@ -8,18 +8,7 @@ import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
 
-// Import the AF2 Module
-import { AngularFireModule } from 'angularfire2';
-
 // AF2 Settings
-export const firebaseConfig = {
-apiKey: "AIzaSyDnAX0CQbbsMYuOTJ66ox_F0GwzPM4XPXY",
-authDomain: "angularfire2-list-example.firebaseapp.com",
-databaseURL: "https://angularfire2-list-example.firebaseio.com",
-storageBucket: "",
-messagingSenderId: "609067141823"
-};
-
 
 @NgModule({
   declarations: [
@@ -32,8 +21,7 @@ messagingSenderId: "609067141823"
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,15 +1,19 @@
 
 <ion-header >
-  <ion-navbar color="dark">
-    <button ion-button menuToggle>
-      <ion-icon name="contact"></ion-icon>
-    </button>
-    <ion-title>
-      Events
-    </ion-title>
+  <ion-navbar>
+
+    <ion-searchbar placeholder="Search Events...">
+      [(ngModel)]="searchTerm"
+      [showCancelButton]="shouldShowCancel"
+      [formControl]="searchControl"
+      (ionInput)="onSearchInput()"
+      (ionCancel)="onCancel()"
+    </ion-searchbar>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding="true" class="has-header">
+
 
 </ion-content>
