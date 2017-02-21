@@ -8,9 +8,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding="true" class="has-header">
+<ion-content class="has-header" id="feed">
 
-  <ion-list can-swipe="true" id="feed">
+  <ion-item id="status">
+      <ion-label color="primary" floating>What have you been working on?</ion-label>
+      <ion-input></ion-input>
+      <button item-right ion-button icon-only background-color="blue">
+        <ion-icon name="arrow-dropup-circle"></ion-icon>
+      </button>
+  </ion-item>
+
+  <ion-list can-swipe="true">
+    <ion-card>
     <ion-item id="user-post">
       <ion-row>
         <ion-col>
@@ -36,6 +45,7 @@
         </ion-col>
       </ion-row>
     </ion-item>
+  </ion-card>
 
   </ion-list>
 

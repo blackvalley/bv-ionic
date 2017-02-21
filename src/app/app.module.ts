@@ -8,6 +8,8 @@ import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { ArticlePage } from '../pages/article/article';
 import { Data } from '../providers/data';
 
 // Import the AF2 Module
@@ -31,6 +33,8 @@ messagingSenderId: "609067141823"
     CommunityPage,
     EventsPage,
     ConnectionsPage,
+    ArticlePage,
+    CalendarPage,
     ProfilePage,
     TabsPage
   ],
@@ -46,6 +50,8 @@ messagingSenderId: "609067141823"
     CommunityPage,
     EventsPage,
     ConnectionsPage,
+    ArticlePage,
+    CalendarPage,
     ProfilePage,
     TabsPage
   ],
