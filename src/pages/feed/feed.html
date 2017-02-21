@@ -1,25 +1,19 @@
 <ion-header>
   <ion-navbar>
     <img src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/bv-logo.png?alt=media&token=edcd44fd-6479-4764-89ff-3df661724f92" width="80" height="40"/>
+    <ion-item id="status">
+        <ion-label floating>What have you been working on?</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    </ion-navbar>
 
-    <ion-title>
-      The Feed
-    </ion-title>
-  </ion-navbar>
 </ion-header>
 
 <ion-content class="has-header" id="feed">
 
-  <ion-item id="status">
-      <ion-label color="primary" floating>What have you been working on?</ion-label>
-      <ion-input></ion-input>
-      <button item-right ion-button icon-only background-color="blue">
-        <ion-icon name="arrow-dropup-circle"></ion-icon>
-      </button>
-  </ion-item>
 
-  <ion-list can-swipe="true">
-    <ion-card>
+  <ion-list can-swipe="true" >
+    <ion-card id="user-card">
     <ion-item id="user-post">
       <ion-row>
         <ion-col>

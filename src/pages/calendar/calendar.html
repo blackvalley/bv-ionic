@@ -8,7 +8,7 @@
 
   <ion-toolbar>
 
-    <ion-segment [(ngModel)]="calendar" color="#454545">
+    <ion-segment [(ngModel)]="calendar">
       <ion-segment-button value="event">Events
       </ion-segment-button>
       <ion-segment-button value="opportunities">Opportunity
@@ -26,16 +26,19 @@
   <div [ngSwitch]="calendar">
     <ion-list *ngSwitchCase="'event'">
       <ion-card id="event-card">
-        <ion-item>
+        <ion-item id="events-header">
+          <ion-card-title id="events-card-title">Black Valley @Twitter</ion-card-title>
+        </ion-item>
+        <ion-item id="card-header">
           <div id="event-date" item-left>
           <h3>Feb</h3>
           <h4>14</h4>
         </div>
           <div item-right>
-          <h2>Black Valley @twitter</h2>
-          <p>Brandon Long Connected you with this Event</p>
+            <p>Silicon Valley</p>
+            <p id="opp-referral"><a href="">Keisha Ebbesen</a> Connected you with this Event</p>
         </div>
-        </ion-item>
+      </ion-item>
         <ion-row>
           <ion-col>
             <button ion-button icon-left clear small>
@@ -59,25 +62,32 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'opportunities'">
+      <ion-searchbar id="navbar" placeholder ="Search Community..." >
+          [(ngModel)]="myInput"
+          [showCancelButton]="shouldShowCancel"
+          (ionInput)="onInput($event)"
+          (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+
       <ion-card id="event-card">
-        <ion-item>
+        <img src="https://www.edx.org/sites/default/files/microsoft_banner1200x536.png"/>
+        <ion-item id="card-header">
           <div id="event-date" item-left>
           <h3>Feb</h3>
           <h4>14</h4>
         </div>
           <div item-right>
-          <h2>Black Valley @twitter</h2>
-          <p>Brandon Long Shared this opportunity with this Event</p>
+          <ion-card-title id="card-title">AR Internship</ion-card-title>
+          <p id="opp-referral"><a href="">Keisha Ebbesen</a> Shared this opportunity with you</p>
         </div>
         </ion-item>
 
         <ion-card-content>
-          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+          <p>Micrsoft is looking for interns interested in AR. Must know Python and Java. Message me if interested</p>
         </ion-card-content>
 
 
       </ion-card>
-
     </ion-list>
   </div>
 

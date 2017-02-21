@@ -1,15 +1,16 @@
 page-profile {
-  background-color: lightgray;
 
   ion-content {
           position: relative;
           background-color: white;
           box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
           padding-top: 10px;
+
         }
 
   #profile-card{
     margin-top: 150px;
+
   }
 
 
@@ -33,8 +34,8 @@ page-profile {
   background-color: lightgray;
   width: 100%;
   min-height: 150px;
-  margin-top: 65px;
-  /*     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/94311/bg.jpg') no-repeat transparent;*/
+  margin-top: 70px;
+  background: url('http://study.com/cimages/course-image/ap-physics-2-textbook_167654_large.jpg') no-repeat transparent;
 
 #profile-btn {
   display: block;

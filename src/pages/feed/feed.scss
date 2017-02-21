@@ -11,19 +11,30 @@ page-feed {
     left: 0;
 
   }
-  #status{
-    background-color: black;
+  #status {
+    background: none;
     min-height: 30px;
     color: #C6E947;
-    border-top: 1px solid #454545;
+    border-radius: 20px 20px 0px 0px;
+    width: 250px;
+    margin-left: 80px;
+    margin-top: -60px;
+    font-size: 14px;
+
 
 
   }
 
+  #user-card{
+    border-radius: 10px;
+    border: 1px solid #000000;
+
+  }
+
+
   #user-post {
     min-height: 90px;
     background-color: lightgray;
-    border: 1px solid #000000;
 
   }
 
