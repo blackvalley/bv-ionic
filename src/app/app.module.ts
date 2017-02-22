@@ -7,7 +7,10 @@ import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { ProfilePage } from '../pages/profile/profile'
+import { FirebaseConfigService } from '../core/service/service'
+import { UserProvider } from '../providers/user.provider'
+import { DummyData } from '../providers/dummy.data'
 // AF2 Settings
 
 @NgModule({
@@ -18,7 +21,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     CommunityPage,
     EventsPage,
     ConnectionsPage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -31,8 +35,12 @@ import { TabsPage } from '../pages/tabs/tabs';
     CommunityPage,
     EventsPage,
     ConnectionsPage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
+      FirebaseConfigService,
+      UserProvider,
+      DummyData]
 })
 export class AppModule {}
