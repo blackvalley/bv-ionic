@@ -15,27 +15,43 @@ page-profile {
 
 
 #profile-img {
-  border-radius: 80px;
   border: 3px solid #000000;
-  margin: 10px 0 0 85px;
-  width: 140px;
-  height: 120px;
+  border-radius: 80px;
+  margin: 10px 0 0 80px;
+  max-width: 150px;
+  max-height: 150px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+#back-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  box-shadow: inset 300px 40px 150px #000000;
 }
 
 #profile-info {
-  display: block;
   text-align: center;
+  margin-top: 180px;
+  z-index: -2;
 }
 
 #profile-back {
   position: fixed;
-  left: 0;
-  top: 0;
+  top: 5px;
   background-color: lightgray;
+  border: 2px solid black;
   width: 100%;
   min-height: 150px;
   margin-top: 70px;
-  background: url('http://study.com/cimages/course-image/ap-physics-2-textbook_167654_large.jpg') no-repeat transparent;
+  margin-right: 5px;
+  margin-left: 5px;
+  box-shadow: 5px 5px 4px #000000;
+
+}
+
 
 #profile-btn {
   display: block;
@@ -43,6 +59,6 @@ page-profile {
 
 }
 
-}
+
 
 }
