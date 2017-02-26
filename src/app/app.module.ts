@@ -6,6 +6,7 @@ import { FeedPage } from '../pages/feed/feed';
 import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
+import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
