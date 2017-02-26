@@ -4,13 +4,12 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-    // login page will appear upon loading application
-  rootPage: LoginPage;
+  // login page will appear upon loading application
+  rootPage = LoginPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

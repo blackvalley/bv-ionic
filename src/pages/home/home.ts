@@ -16,9 +16,6 @@ export class HomePage {
 
   // set user details to current user
   constructor(private navCtrl: NavController, private auth: AuthService) {
-    let info = this.auth.getUserInfo();
-    this.username = info.name;
-    this.email = info.email;
   }
 
 
