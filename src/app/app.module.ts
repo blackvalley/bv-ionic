@@ -7,15 +7,12 @@ import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
-<<<<<<< HEAD
-=======
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
 import { Data } from '../providers/data';
 
 // Import the AF2 Module
 import { AngularFireModule } from 'angularfire2';
->>>>>>> blackvalley/profile-page
 
 // AF2 Settings
 
@@ -27,12 +24,9 @@ import { AngularFireModule } from 'angularfire2';
     CommunityPage,
     EventsPage,
     ConnectionsPage,
-<<<<<<< HEAD
-=======
     ArticlePage,
     CalendarPage,
     ProfilePage,
->>>>>>> blackvalley/profile-page
     TabsPage
   ],
   imports: [
@@ -46,12 +40,9 @@ import { AngularFireModule } from 'angularfire2';
     CommunityPage,
     EventsPage,
     ConnectionsPage,
-<<<<<<< HEAD
-=======
     ArticlePage,
     CalendarPage,
     ProfilePage,
->>>>>>> blackvalley/profile-page
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
