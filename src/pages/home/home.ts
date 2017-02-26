@@ -14,7 +14,7 @@ export class HomePage {
   email = '';
 
     // set user details to current user
-  constructor(private nav: NavController, private auth: AuthService) {
+  constructor(private navCtrl: NavController, private auth: AuthService) {
     let info = this.auth.getUserInfo();
     this.username = info.name;
     this.email = info.email;
@@ -22,7 +22,7 @@ export class HomePage {
 
 
   article(){
-    this.nav.push(ArticlePage);
+    this.navCtrl.push(ArticlePage);
   }
 
 }

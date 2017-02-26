@@ -21,7 +21,7 @@ export class ProfilePage {
   email = '';
 
   // set user details to current user
-  constructor(private nav: NavController, private auth: AuthService) {
+  constructor(private navCtrl: NavController, private auth: AuthService) {
     let info = this.auth.getUserInfo();
     this.username = info.name;
     this.email = info.email;
@@ -30,12 +30,12 @@ export class ProfilePage {
     // log user out
   public logout() {
     this.auth.logout().subscribe(succ => {
-      this.nav.setRoot(LoginPage)
+      //this.navCtrl.setRoot(LoginPage)
     });
   }
 
   launchConnPage(){
-    this.nav.push(ConnectionsPage);
+    this.navCtrl.push(ConnectionsPage);
   }
 
 

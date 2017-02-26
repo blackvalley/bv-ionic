@@ -49,6 +49,13 @@ page-login {
       color: #ffffff;
       font-size: 0.8em;
     }
+    .invalid {
+      border-bottom: 1px solid #FF6153;
+    }
+
+    .error-message .item-inner {
+      border-bottom: 0 !important;
+    }
   }
 
 }

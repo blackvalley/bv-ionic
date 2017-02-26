@@ -10,7 +10,7 @@ export class RegisterPage {
   createSuccess = false;
   registerCredentials = {email: '', password: ''};
 
-  constructor(private nav: NavController, private auth: AuthService, private alertCtrl: AlertController) {}
+  constructor(private navCtrl: NavController, private auth: AuthService, private alertCtrl: AlertController) {}
 
   public register() {
     this.auth.register(this.registerCredentials).subscribe(success => {
@@ -35,7 +35,7 @@ export class RegisterPage {
           text: 'OK',
           handler: data => {
             if (this.createSuccess) {
-              this.nav.popToRoot();
+              this.navCtrl.popToRoot();
             }
           }
         }
