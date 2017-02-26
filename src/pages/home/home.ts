@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { AuthService } from '../../providers/auth-service';
+import { LoginPage } from '../login/login';
 import { ArticlePage } from '../article/article';
 
 
@@ -9,12 +10,19 @@ import { ArticlePage } from '../article/article';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  username = '';
+  email = '';
 
-  constructor(public navCtrl: NavController) {
-
+    // set user details to current user
+  constructor(private nav: NavController, private auth: AuthService) {
+    let info = this.auth.getUserInfo();
+    this.username = info.name;
+    this.email = info.email;
   }
+
+
   article(){
-    this.navCtrl.push(ArticlePage);
+    this.nav.push(ArticlePage);
   }
 
 }

@@ -4,4 +4,4 @@ export const FIREBASE_CONFIG = {
   databaseURL: "https://bv-ionic.firebaseio.com",
   storageBucket: "bv-ionic.appspot.com",
   messagingSenderId: "87228963206"
-}
+};

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { AuthService } from '../../providers/auth-service';
+import { LoginPage } from '../login/login';
 import { ConnectionsPage } from '../connections/connections';
 
 
@@ -16,12 +17,25 @@ import { ConnectionsPage } from '../connections/connections';
 })
 export class ProfilePage {
 
+  username = '';
+  email = '';
 
-  constructor(public navCtrl: NavController) {
+  // set user details to current user
+  constructor(private nav: NavController, private auth: AuthService) {
+    let info = this.auth.getUserInfo();
+    this.username = info.name;
+    this.email = info.email;
+  }
+
+    // log user out
+  public logout() {
+    this.auth.logout().subscribe(succ => {
+      this.nav.setRoot(LoginPage)
+    });
   }
 
   launchConnPage(){
-    this.navCtrl.push(ConnectionsPage);
+    this.nav.push(ConnectionsPage);
   }
 
 

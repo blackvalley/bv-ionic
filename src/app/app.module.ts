@@ -10,7 +10,11 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
+import { LoginPage } from '../pages/login/login';
+import { AuthService } from '../providers/auth-service';
+import { RegisterPage } from '../pages/register/register';
 import { Data } from '../providers/data';
+import {FIREBASE_CONFIG } from '../core/constant/constant';
 
 // Import the AF2 Module
 import { AngularFireModule } from 'angularfire2';
@@ -28,9 +32,12 @@ import { AngularFireModule } from 'angularfire2';
     ArticlePage,
     CalendarPage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -44,8 +51,10 @@ import { AngularFireModule } from 'angularfire2';
     ArticlePage,
     CalendarPage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService]
 })
 export class AppModule {}

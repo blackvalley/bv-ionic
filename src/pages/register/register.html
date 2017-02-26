@@ -1,20 +1,20 @@
 <!--
 
-  Login Page
-
-
+  Register Page
 
 -->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
 <ion-content class="login-content" padding>
-  <ion-row class="logo-row">
-    <ion-col></ion-col>
-    <ion-col width-67>
-      <img src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/bvlogo.PNG?alt=media&token=abb56fee-2602-4f66-9f1d-31d30f7227c0"/>
-    </ion-col>
-    <ion-col></ion-col>
-  </ion-row>
   <div class="login-box">
-    <form (ngSubmit)="login()" #registerForm="ngForm">
+
+    <form (ngSubmit)="register()" #registerForm="ngForm">
       <ion-row>
         <ion-col>
           <ion-list inset>
@@ -33,11 +33,10 @@
 
       <ion-row>
         <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
-          <button ion-button class="register-btn" block clear (click)="createAccount()">Create New Account</button>
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
         </ion-col>
       </ion-row>
 
     </form>
-</div>
+  </div>
 </ion-content>
