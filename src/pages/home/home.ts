@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
@@ -13,7 +14,7 @@ export class HomePage {
   username = '';
   email = '';
 
-    // set user details to current user
+  // set user details to current user
   constructor(private navCtrl: NavController, private auth: AuthService) {
     let info = this.auth.getUserInfo();
     this.username = info.name;

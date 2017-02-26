@@ -18,7 +18,7 @@ export class User {
 export class AuthService {
   currentUser: User;
 
-      // attempt to login user
+  // attempt to login user
   public login(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
@@ -33,7 +33,7 @@ export class AuthService {
     }
   }
 
-      // attempt to register new user
+  // attempt to register new user
   public register(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
@@ -46,12 +46,12 @@ export class AuthService {
     }
   }
 
-    // grab current user info
+  // grab current user info
   public getUserInfo() : User {
     return this.currentUser;
   }
 
-    // logout current user
+  // logout current user
   public logout() {
     return Observable.create(observer => {
       this.currentUser = null;

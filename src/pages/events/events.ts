@@ -12,38 +12,38 @@ import 'rxjs/add/operator/debounceTime';
 })
 export class EventsPage {
 
-searchTerm: string = '';
+  searchTerm: string = '';
   searchControl: FormControl;
   items: any;
   searching: any = false;
   events: FirebaseListObservable<any>;
 
   constructor(public navCtrl: NavController, public dataService: Data, af: AngularFire) {
-      this.searchControl = new FormControl();
-      this.events = af.database.list('/events');
+    this.searchControl = new FormControl();
+    this.events = af.database.list('/events');
   }
 
   ionViewDidLoad() {
 
+    this.setFilteredItems();
+
+    this.searchControl.valueChanges.debounceTime(100).subscribe(search => {
+
+      this.searching = false;
       this.setFilteredItems();
 
-      this.searchControl.valueChanges.debounceTime(100).subscribe(search => {
-
-          this.searching = false;
-          this.setFilteredItems();
-
-      });
+    });
 
 
   }
 
   onSearchInput(){
-      this.searching = true;
+    this.searching = true;
   }
 
   setFilteredItems() {
 
-      this.items = this.dataService.filterItems(this.searchTerm);
+    this.items = this.dataService.filterItems(this.searchTerm);
 
   }
 }

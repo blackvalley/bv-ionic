@@ -30,7 +30,7 @@ export class ProfilePage {
     // log user out
   public logout() {
     this.auth.logout().subscribe(succ => {
-      //this.navCtrl.setRoot(LoginPage)
+      this.navCtrl.setRoot(LoginPage)
     });
   }
 
