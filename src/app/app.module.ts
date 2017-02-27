@@ -15,10 +15,11 @@ import { AuthService } from '../providers/auth-service';
 import { RegisterPage } from '../pages/register/register';
 import { Data } from '../providers/data';
 import {FIREBASE_CONFIG } from '../core/constant/constant';
-
 // Import the AF2 Module
 import { AngularFireModule } from 'angularfire2';
-
+import { FirebaseConfigService } from '../core/service/service'
+import { UserProvider } from '../providers/user.provider'
+import { DummyData } from '../providers/dummy.data'
 // AF2 Settings
 
 @NgModule({
@@ -35,6 +36,8 @@ import { AngularFireModule } from 'angularfire2';
     TabsPage,
     LoginPage,
     RegisterPage
+    TabsPage,
+    ProfilePage
   ],
   imports: [
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
@@ -56,5 +59,12 @@ import { AngularFireModule } from 'angularfire2';
     RegisterPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService]
+    TabsPage,
+    ProfilePage
+  ],
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
+      FirebaseConfigService,
+      UserProvider,
+      DummyData]
 })
 export class AppModule {}

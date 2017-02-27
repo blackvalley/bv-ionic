@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormControl } from '@angular/forms';
-import { Data } from '../../providers/data';
+import { DummyData } from '../../providers/dummy.data';
 import 'rxjs/add/operator/debounceTime';
 
 /*
@@ -21,7 +21,7 @@ export class ConnectionsPage {
   items: any;
   searching: any = false;
 
-  constructor(public navCtrl: NavController, public dataService: Data) {
+  constructor(public navCtrl: NavController, public dataService: DummyData) {
       this.searchControl = new FormControl();
   }
 

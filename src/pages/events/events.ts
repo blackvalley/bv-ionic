@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { FormControl } from '@angular/forms';
 import { Data } from '../../providers/data';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
+import { DummyData } from '../../providers/dummy.data';
 import 'rxjs/add/operator/debounceTime';
 
 
