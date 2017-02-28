@@ -6,7 +6,6 @@ import { FeedPage } from '../pages/feed/feed';
 import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
-import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
@@ -16,14 +15,6 @@ import { Data } from '../providers/data';
 import { AngularFireModule } from 'angularfire2';
 
 // AF2 Settings
-export const firebaseConfig = {
-apiKey: "AIzaSyDnAX0CQbbsMYuOTJ66ox_F0GwzPM4XPXY",
-authDomain: "angularfire2-list-example.firebaseapp.com",
-databaseURL: "https://angularfire2-list-example.firebaseio.com",
-storageBucket: "",
-messagingSenderId: "609067141823"
-};
-
 
 @NgModule({
   declarations: [
@@ -39,8 +30,7 @@ messagingSenderId: "609067141823"
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,9 +42,8 @@ messagingSenderId: "609067141823"
     ConnectionsPage,
     ArticlePage,
     CalendarPage,
-    ProfilePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Data]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
