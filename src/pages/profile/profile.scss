@@ -17,7 +17,7 @@ page-profile {
 #profile-img {
   border: 3px solid #000000;
   border-radius: 80px;
-  margin: 10px 0 0 80px;
+  margin: 10px;
   max-width: 150px;
   max-height: 150px;
   height: 100%;
@@ -44,9 +44,9 @@ page-profile {
   background-color: lightgray;
   border: 2px solid black;
   width: 100%;
+  text-align: center;
   min-height: 150px;
   margin-top: 70px;
-  margin-right: 5px;
   margin-left: 5px;
   box-shadow: 5px 5px 4px #000000;
 

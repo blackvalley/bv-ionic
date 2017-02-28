@@ -14,7 +14,7 @@ import { EventsPage } from '../events/events';
   templateUrl: 'calendar.html'
 })
 export class CalendarPage {
-  rootPage = EventsPage;
+  rootPage: any = EventsPage;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
