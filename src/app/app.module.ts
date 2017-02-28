@@ -7,6 +7,12 @@ import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { ArticlePage } from '../pages/article/article';
+import { Data } from '../providers/data';
+
+// Import the AF2 Module
+import { AngularFireModule } from 'angularfire2';
 
 // AF2 Settings
 
@@ -18,6 +24,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     CommunityPage,
     EventsPage,
     ConnectionsPage,
+    ArticlePage,
+    CalendarPage,
+    ProfilePage,
     TabsPage
   ],
   imports: [
@@ -31,6 +40,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     CommunityPage,
     EventsPage,
     ConnectionsPage,
+    ArticlePage,
+    CalendarPage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
