@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+import { ArticlePage } from '../article/article';
 
 
 @Component({
@@ -7,8 +10,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
 
+  }
+  article(){
+    this.navCtrl.push(ArticlePage);
   }
 
 }

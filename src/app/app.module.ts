@@ -11,6 +11,13 @@ import { ProfilePage } from '../pages/profile/profile'
 import { FirebaseConfigService } from '../core/service/service'
 import { UserProvider } from '../providers/user.provider'
 import { DummyData } from '../providers/dummy.data'
+import { CalendarPage } from '../pages/calendar/calendar';
+import { ArticlePage } from '../pages/article/article';
+
+
+// Import the AF2 Module
+import { AngularFireModule } from 'angularfire2';
+
 // AF2 Settings
 
 @NgModule({
@@ -21,8 +28,10 @@ import { DummyData } from '../providers/dummy.data'
     CommunityPage,
     EventsPage,
     ConnectionsPage,
-    TabsPage,
-    ProfilePage
+    ArticlePage,
+    CalendarPage,
+    ProfilePage,
+    TabsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,6 +44,8 @@ import { DummyData } from '../providers/dummy.data'
     CommunityPage,
     EventsPage,
     ConnectionsPage,
+    ArticlePage,
+    CalendarPage,
     TabsPage,
     ProfilePage
   ],
@@ -42,5 +53,6 @@ import { DummyData } from '../providers/dummy.data'
       FirebaseConfigService,
       UserProvider,
       DummyData]
+
 })
 export class AppModule {}
