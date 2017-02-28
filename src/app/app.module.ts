@@ -7,10 +7,13 @@ import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ProfilePage } from '../pages/profile/profile'
+import { FirebaseConfigService } from '../core/service/service'
+import { UserProvider } from '../providers/user.provider'
+import { DummyData } from '../providers/dummy.data'
 import { CalendarPage } from '../pages/calendar/calendar';
-import { ProfilePage } from '../pages/profile/profile';
 import { ArticlePage } from '../pages/article/article';
-import { Data } from '../providers/data';
+
 
 // Import the AF2 Module
 import { AngularFireModule } from 'angularfire2';
@@ -43,9 +46,13 @@ import { AngularFireModule } from 'angularfire2';
     ConnectionsPage,
     ArticlePage,
     CalendarPage,
-    ProfilePage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Data]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
+      FirebaseConfigService,
+      UserProvider,
+      DummyData]
+
 })
 export class AppModule {}
