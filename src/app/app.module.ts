@@ -13,12 +13,10 @@ import { UserProvider } from '../providers/user.provider'
 import { DummyData } from '../providers/dummy.data'
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
+import { CommentsPage } from '../pages/comments/comments';
+import { SxswPage } from '../pages/sxsw/sxsw';
 
 
-// Import the AF2 Module
-import { AngularFireModule } from 'angularfire2';
-
-// AF2 Settings
 
 @NgModule({
   declarations: [
@@ -31,6 +29,8 @@ import { AngularFireModule } from 'angularfire2';
     ArticlePage,
     CalendarPage,
     ProfilePage,
+    CommentsPage,
+    SxswPage,
     TabsPage
   ],
   imports: [
@@ -47,6 +47,8 @@ import { AngularFireModule } from 'angularfire2';
     ArticlePage,
     CalendarPage,
     TabsPage,
+    CommentsPage,
+    SxswPage,
     ProfilePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 
 import { ArticlePage } from '../article/article';
-
+import { CommentsPage } from '../comments/comments';
 
 @Component({
   selector: 'page-home',
@@ -10,11 +10,16 @@ import { ArticlePage } from '../article/article';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
   article(){
     this.navCtrl.push(ArticlePage);
+  }
+
+  comments(){
+    let commentsModal = this.modalCtrl.create(CommentsPage);
+    commentsModal.present();
   }
 
 }

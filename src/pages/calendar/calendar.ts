@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { EventsPage } from '../events/events';
 
+import { SxswPage } from '../sxsw/sxsw';
 
 /*
   Generated class for the Calendar page.
@@ -14,13 +14,18 @@ import { EventsPage } from '../events/events';
   templateUrl: 'calendar.html'
 })
 export class CalendarPage {
-  rootPage: any = EventsPage;
+  calendar: any = "events"
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalendarPage');
+  }
+
+  sxswschedule() {
+    this.navCtrl.push(SxswPage)
   }
 
 }
