@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../../providers/auth-service';
+import { AuthProvider } from '../../providers/auth.provider';
 import { SignupPage } from '../signup/signup';
 import { HomePage } from '../home/home';
 import { PwresetPage } from '../pwreset/pwreset';
@@ -20,7 +20,7 @@ export class LoginPage {
   private loginForm
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public authData: AuthService, public formBuilder: FormBuilder,public alertCtrl: AlertController,
+    public authProvider: AuthProvider, public formBuilder: FormBuilder,public alertCtrl: AlertController,
      public loadingCtrl: LoadingController) {
 
        this.loginForm = formBuilder.group({
@@ -35,6 +35,13 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  goToSignup(): void {
+  this.navCtrl.push(SignupPage);
+  }
+  goToResetPassword(): void {
+  this.navCtrl.push(PwresetPage);
   }
 
 }
