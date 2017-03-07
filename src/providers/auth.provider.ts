@@ -6,7 +6,7 @@ import { FirebaseConfigService } from '../core/service/service'
 import firebase from 'firebase'
 
 @Injectable()
-export class AuthService {
+export class AuthProvider {
 
   constructor(private fire: FirebaseConfigService){}
   private fireAuth = this.fire.getAuth()

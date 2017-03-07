@@ -4,7 +4,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../providers/auth-service';
 import { SignupPage } from '../signup/signup';
 import { HomePage } from '../home/home';
-import { ResetPasswordPage } from '../reset-password/reset-password';
+import { PwresetPage } from '../pwreset/pwreset';
 /*
   Generated class for the Login page.
 

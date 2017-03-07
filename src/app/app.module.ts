@@ -15,7 +15,10 @@ import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
 import { CommentsPage } from '../pages/comments/comments';
 import { SxswPage } from '../pages/sxsw/sxsw';
-
+import { LoginPage } from '../pages/login/login'
+import { SignupPage } from '../pages/signup/signup'
+import { PwresetPage } from '../pages/pwreset/pwreset'
+import { AuthProvider } from '../providers/auth.provider'
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { SxswPage } from '../pages/sxsw/sxsw';
     ProfilePage,
     CommentsPage,
     SxswPage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    SignupPage,
+    PwresetPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -49,11 +55,15 @@ import { SxswPage } from '../pages/sxsw/sxsw';
     TabsPage,
     CommentsPage,
     SxswPage,
-    ProfilePage
+    ProfilePage,
+    LoginPage,
+    SignupPage,
+    PwresetPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
       FirebaseConfigService,
       UserProvider,
+      AuthProvider,
       DummyData]
 
 })
