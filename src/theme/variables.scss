@@ -12,9 +12,9 @@ $font-path: "../assets/fonts";
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-$background-color: #515151;
+$background-color: #716C6C;
 $toolbar-background: #000000;
-$card-ios-text-color: #ffffff;
+$card-ios-text-color: #000000;
 
 
 
@@ -29,7 +29,7 @@ $card-ios-text-color: #ffffff;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #515151,
+  primary:    #454545,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -41,7 +41,7 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-$searchbar-ios-toolbar-input-background: #515151;
+$searchbar-ios-toolbar-input-background: #454545;
 $spinner-ios-ios-color: black;
 $searchbar-ios-input-text-color: #C6E947;
 $segment-button-ios-background-color: black;
@@ -59,16 +59,6 @@ $picker-ios-toolbar-background-color: none;
 // Material Design only Sass variables can go here
 
 $segment-button-md-text-color: #C6E947;
-$searchbar-md-toolbar-input-background: #515151;
-$spinner-md-ios-color: black;
-$searchbar-md-input-text-color: #C6E947;
-$segment-button-md-background-color: black;
-$segment-button-md-border-width: 1px;
-$segment-button-md-toolbar-font-size: 2rem;
-$segment-button-md-toolbar-button-max-width: 150px;
-$segment-button-md-text-color: #C6E947;
-$picker-md-toolbar-background-color: none;
-
 
 
 

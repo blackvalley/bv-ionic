@@ -10,14 +10,8 @@ page-home {
 
 #card {
   box-shadow: 0 0 3px 2px #000;
-  background-color: black;
-
+  background-color: lightgray;
   }
-#card p {
-  color: white;
-  font-size: 12px;
-
-}
 #card img {
   border: 2px solid black;
 }
@@ -27,29 +21,8 @@ page-home {
   color: #C6E947;
 }
 
-#card ion-row {
-  border-top: 1px solid #515151;
-  margin: 0px 8px;
-}
-#card h4{
-  margin: 12px 0px 0px 5px;
-  color: #515151;
-  text-decoration: underline;
-}
-
-
 #card ion-note {
   color: #000000;
-}
-
-#card button {
-  padding: 15px 60px;
-  color: #C6E947;
-  text-align: center;
-  box-shadow: 0 0 3px 1px white;
-  border: 1px solid #515151;
-  width: 100px;
-
 
 }
 
