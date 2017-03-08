@@ -9,8 +9,8 @@
 
   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate id="login-form">
 
-
-    <div id="login-field">
+    <ion-item>
+    <span id="login-field">
     <ion-item>
       <ion-label stacked>Email</ion-label>
       <ion-input #email formControlName="email" type="email" placeholder="Your email address"
@@ -30,7 +30,8 @@
       *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
       <p>Your password needs more than 6 characters.</p>
     </ion-item>
-  </div>
+  </span>
+</ion-item>
 
     <button ion-button type="submit">
       Connect

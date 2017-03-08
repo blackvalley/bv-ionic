@@ -15,40 +15,48 @@
 
 <ion-content padding>
 
-  <form [formGroup]="signupForm" (submit)="loginUser()" novalidate id="signupin-form">
+  <ion-card id="signup-card">
+    <img src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/bvlogo.PNG?alt=media&token=abb56fee-2602-4f66-9f1d-31d30f7227c0" />
+    <title>Change the face Tech</title>
+  <form [formGroup]="signupForm" (submit)="loginUser()" novalidate id="signup-form">
 
 
       <ion-item>
         <ion-label stacked>First Name</ion-label>
-          <ion-input #fname placeholder="Your first name" formControlName="fname"></ion-input>
+          <ion-input #fname placeholder="Your First name" formControlName="fname"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Last Name</ion-label>
           <ion-input #lname placeholder="Your Last name" formControlName="lname"></ion-input>
       </ion-item>
-
-    <ion-item>
-      <ion-label stacked>Email</ion-label>
-      <ion-input #email formControlName="email" type="email" placeholder="Your email address"
+      <ion-item>
+        <ion-label>Birthday</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" pickerFormat="MMM DD YYYY" formControlName="bday">Select Birthday</ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input #email formControlName="email" type="email" placeholder="Your email address"
         [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty"></ion-input>
-    </ion-item>
+      </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Password</ion-label>
-      <ion-input #password formControlName="password" type="password" placeholder="Your password"
-        [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty"></ion-input>
-    </ion-item>
-    <ion-item class="error-message"
-      *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
-      <p>Your password needs more than 6 characters.</p>
-    </ion-item>
-
-    <button ion-button type="submit">
-      Connect
-    </button>
-
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input #password formControlName="password" type="password" placeholder="Your password"
+          [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty"></ion-input>
+      </ion-item>
+      <ion-item class="error-message"
+        *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
+        <p>Your password needs more than 6 characters.</p>
+      </ion-item>
 
   </form>
+
+</ion-card>
+
+
+  <button ion-button type="submit" (click)="createAccount()" id="connect-btn">
+      Connect
+  </button>
 
 
 </ion-content>

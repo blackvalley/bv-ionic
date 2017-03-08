@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, AlertController, LoadingController, } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth.provider';
 
@@ -24,11 +24,21 @@ export class SignupPage {
     this.signupForm = formBuilder.group({
       fname: ['', Validators.compose([Validators.required])],
       lname: ['', Validators.compose([Validators.required])],
+      bday: ['', Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.minLength(6),
        Validators.required])]
      });
 
+  }
+
+  createAccount() {
+    let alert = this.alertCtrl.create({
+      title: 'Welcome to Black Valley',
+      subTitle: "Your account has been created!",
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
