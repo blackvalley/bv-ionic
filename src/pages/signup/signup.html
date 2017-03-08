@@ -15,4 +15,40 @@
 
 <ion-content padding>
 
+  <form [formGroup]="signupForm" (submit)="loginUser()" novalidate id="signupin-form">
+
+
+      <ion-item>
+        <ion-label stacked>First Name</ion-label>
+          <ion-input #fname placeholder="Your first name" formControlName="fname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Last Name</ion-label>
+          <ion-input #lname placeholder="Your Last name" formControlName="lname"></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input #email formControlName="email" type="email" placeholder="Your email address"
+        [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input #password formControlName="password" type="password" placeholder="Your password"
+        [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message"
+      *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    <button ion-button type="submit">
+      Connect
+    </button>
+
+
+  </form>
+
+
 </ion-content>
