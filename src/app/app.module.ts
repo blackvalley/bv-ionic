@@ -9,6 +9,7 @@ import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
+import { ProfilePage } from '../pages/profile/profile';
 import { Data } from '../providers/data';
 
 // Import the AF2 Module
@@ -42,6 +43,7 @@ import { AngularFireModule } from 'angularfire2';
     ConnectionsPage,
     ArticlePage,
     CalendarPage,
+    ProfilePage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
