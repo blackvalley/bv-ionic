@@ -3,7 +3,6 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { FirebaseConfigService } from '../core/service/service'
-import firebase from 'firebase'
 
 @Injectable()
 export class AuthProvider {
