@@ -1,17 +1,19 @@
 
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>
-      Login
-    </ion-title>
+  <ion-navbar>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <img src="http://placehold.it/300x100">
+<ion-content padding id="login-page">
 
-  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+  <ion-card id="login-card">
 
+  <img src="https://firebasestorage.googleapis.com/v0/b/bv-ionic.appspot.com/o/IMG_3535.JPG?alt=media&token=f7a2c39b-dfe9-4068-8105-5e2976314e4c">
+
+  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate id="login-form">
+
+
+    <div id="login-field">
     <ion-item>
       <ion-label stacked>Email</ion-label>
       <ion-input #email formControlName="email" type="email" placeholder="Your email address"
@@ -31,19 +33,24 @@
       *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
       <p>Your password needs more than 6 characters.</p>
     </ion-item>
+  </div>
 
-    <button ion-button block type="submit">
-      Login
+    <button ion-button type="submit">
+      Connect
     </button>
+
 
   </form>
 
-    <button ion-button block clear (click)="goToSignup()">
-      Create a new account
+</ion-card>
+    <button ion-button block clear (click)="goToSignup()" id="buttons">
+      Join the Network
     </button>
 
-    <button ion-button block clear (click)="goToResetPassword()">
+    <button ion-button block clear (click)="goToResetPassword()" id="buttons">
       I forgot my password
     </button>
+
+
 
 </ion-content>
