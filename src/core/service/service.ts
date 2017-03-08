@@ -8,10 +8,13 @@ import { FIREBASE_CONFIG } from "../constant/constant"
 export class FirebaseConfigService {
 
     private database : firebase.database.Database
-
+    private storage : firebase.storage.Storage
+    private auth : firebase.auth.Auth
     constructor(){
       this.configureApp()
       this.configureDatabase()
+      this.configureStorage()
+      this.configureAuth()
     }
     //configure app with our specific db config
     configureApp(){
@@ -21,8 +24,24 @@ export class FirebaseConfigService {
     configureDatabase(){
       this.database = firebase.database()
     }
-    //encapsulate object
+    //create a storage reference object
+    configureStorage(){
+      this.storage = firebase.storage()
+    }
+    //creates an auth reference
+    configureAuth(){
+      this.auth = firebase.auth()
+    }
+    //encapsulate databse object
     getDatabase() : firebase.database.Database{
       return this.database
+    }
+    //encapsulate storage object
+    getStorage() : firebase.storage.Storage{
+      return this.storage
+    }
+    //encapsulate auth object
+    getAuth() : firebase.auth.Auth{
+      return this.auth
     }
 }

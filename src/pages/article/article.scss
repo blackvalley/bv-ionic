@@ -1,21 +1,52 @@
 page-article {
 
+  ion-header {
+    box-shadow: 0px 0px 10px 2px #515151;
+
+  }
+
+  #article-page {
+    background : #000000;
+
+  }
+
+
   #article-img{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: #454545;
-    height: 200px;
+    background : black;
     //background: url(https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/BlackValley-33.jpg?alt=media&token=8e3db19e-ba31-486b-bb35-0f450fd2ac2a);
 
   }
 
+
   #article {
-    margin-top: 200px;
+    margin-top: 15px;
+    color: white;
+    background-color: black;
+
+
+  }
+
+  #article-title{
+    white-space: normal;
+    margin: -10px -20px 10px -10px;
+    padding: 5px;
+    color: #C6E947;
+    background-color: black;
+
+  }
+
+  #quote {
+    width: 150px;
+    color: #C6E947;
+    border-top: 1px solid #515151;
+    border-bottom: 1px solid #515151;
+    font-size: 17px;
+    padding: 5px;
+
+
   }
 
   #article-content{
 
   }
-
 }
