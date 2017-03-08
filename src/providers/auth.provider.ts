@@ -16,7 +16,9 @@ export class AuthProvider {
   loginUser(email: string, password: string): firebase.Promise<any> {
   return this.fireAuth.signInWithEmailAndPassword(email, password);
     }
-
+  getCurrentUser(){
+    return this.fireAuth.currentUser.uid
+  }
   //signs up user
   signupUser(email: string, password: string): firebase.Promise<any> {
   return this.fireAuth.createUserWithEmailAndPassword(email, password)
