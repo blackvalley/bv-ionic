@@ -7,19 +7,14 @@ import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ProfilePage } from '../pages/profile/profile'
-import { FirebaseConfigService } from '../core/service/service'
-import { UserProvider } from '../providers/user.provider'
-import { DummyData } from '../providers/dummy.data'
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
-import { CommentsPage } from '../pages/comments/comments';
-import { SxswPage } from '../pages/sxsw/sxsw';
-import { LoginPage } from '../pages/login/login'
-import { SignupPage } from '../pages/signup/signup'
-import { PwresetPage } from '../pages/pwreset/pwreset'
-import { AuthProvider } from '../providers/auth.provider'
+import { Data } from '../providers/data';
 
+// Import the AF2 Module
+import { AngularFireModule } from 'angularfire2';
+
+// AF2 Settings
 
 @NgModule({
   declarations: [
@@ -32,12 +27,7 @@ import { AuthProvider } from '../providers/auth.provider'
     ArticlePage,
     CalendarPage,
     ProfilePage,
-    CommentsPage,
-    SxswPage,
-    TabsPage,
-    LoginPage,
-    SignupPage,
-    PwresetPage
+    TabsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -52,19 +42,8 @@ import { AuthProvider } from '../providers/auth.provider'
     ConnectionsPage,
     ArticlePage,
     CalendarPage,
-    TabsPage,
-    CommentsPage,
-    SxswPage,
-    ProfilePage,
-    LoginPage,
-    SignupPage,
-    PwresetPage
+    TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
-      FirebaseConfigService,
-      UserProvider,
-      AuthProvider,
-      DummyData]
-
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
