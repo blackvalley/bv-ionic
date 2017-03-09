@@ -35,7 +35,7 @@ export class SignupPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
-
+  // sign up user with auth provider
   signupUser(){
   if (!this.signupForm.valid){
     console.log(this.signupForm.value);
