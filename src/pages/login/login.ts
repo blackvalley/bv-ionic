@@ -37,6 +37,7 @@ export class LoginPage {
      loginUser(): void {
        this.showLoading()
        if (!this.loginForm.valid){
+         this.showError("Login form invalid");
          console.log(this.loginForm.value);//error
        } else {//login the user using our firebase auth provider
          this.authProvider.loginUser(this.loginForm.value.email, this.loginForm.value.password).then( authData => {
@@ -59,8 +60,6 @@ export class LoginPage {
            });
          });
 
-         this.loader = this.loadingCtrl.create();
-         this.loader.present();
        }
      }
 

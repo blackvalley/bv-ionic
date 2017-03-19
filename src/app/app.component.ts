@@ -18,10 +18,8 @@ export class MyApp {
         this.zone.run( () => {
             if (!user) {
               this.rootPage = LoginPage;
-              unsubscribe();
             } else {
               this.rootPage = TabsPage;
-              unsubscribe();
             }
           });
         });

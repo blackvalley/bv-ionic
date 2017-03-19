@@ -12,6 +12,17 @@
   <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
 
     <ion-item>
+      <ion-label stacked>First Name</ion-label>
+      <ion-input #fname formControlName="fname" type="fname" placeholder="Your first name"
+        [class.invalid]="!signupForm.controls.fname.valid && signupForm.controls.fname.dirty">
+        </ion-input>
+    </ion-item>
+    <ion-item class="error-message"
+      *ngIf="!signupForm.controls.fname.valid  && signupForm.controls.fname.dirty">
+      <p>First name must be at least two characters.</p>
+    </ion-item>
+
+    <ion-item>
       <ion-label stacked>Email</ion-label>
       <ion-input #email formControlName="email" type="email" placeholder="Your email address"
         [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty">

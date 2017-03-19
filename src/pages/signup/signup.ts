@@ -20,14 +20,15 @@ import { TabsPage } from '../tabs/tabs'
 export class SignupPage {
 
   private signupForm;
-  private loading;
+  private loader;
 
 
- constructor(public nav: NavController, public authProvider: AuthProvider,
-   public formBuilder: FormBuilder, public loadingCtrl: LoadingController,
-   public alertCtrl: AlertController) {
+ constructor(private nav: NavController, private authProvider: AuthProvider,
+   private formBuilder: FormBuilder, private loadingCtrl: LoadingController,
+   private alertCtrl: AlertController) {
 
    this.signupForm = formBuilder.group({
+     fname: ['', Validators.compose([Validators.minLength(2),Validators.required])],
      email: ['', Validators.compose([Validators.required, Validators.required])],
      password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
    })
@@ -40,13 +41,14 @@ export class SignupPage {
   if (!this.signupForm.valid){
     console.log(this.signupForm.value);
   } else {
-    this.authProvider.signupUser(this.signupForm.value.email, this.signupForm.value.password)
+    this.authProvider.signupUser(this.signupForm.value.fname,
+      this.signupForm.value.email, this.signupForm.value.password)
     .then(() => {
-      this.loading.dismiss().then( () => {
+      this.loader.dismiss().then( () => {
         this.nav.setRoot(TabsPage);
       });
     }, (error) => {
-      this.loading.dismiss().then( () => {
+      this.loader.dismiss().then( () => {
         let alert = this.alertCtrl.create({
           message: error.message,
           buttons: [
@@ -59,9 +61,28 @@ export class SignupPage {
         alert.present();
       });
     });
-    this.loading = this.loadingCtrl.create();
-    this.loading.present();
+    this.loader = this.loadingCtrl.create();
+    this.loader.present();
+    }
   }
-}
+  showError(text){
+    setTimeout(() => {
+      this.loader.dismiss();
+    });
+
+    let prompt = this.alertCtrl.create({
+      title: 'Fail',
+      subTitle: text,
+      buttons: ['OK']
+    });
+    prompt.present();
+  }
+  showLoading() {//this will show a loading symbol while the app is getting data
+     this.loader = this.loadingCtrl.create({
+       content: 'Please wait...'
+     });
+     this.loader.present();
+   }
+
 
 }

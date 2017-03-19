@@ -19,6 +19,7 @@ import { LoginPage } from '../pages/login/login'
 import { SignupPage } from '../pages/signup/signup'
 import { PwresetPage } from '../pages/pwreset/pwreset'
 import { AuthProvider } from '../providers/auth.provider'
+import { ProfileData } from '../providers/profile.data'
 
 
 @NgModule({
@@ -62,7 +63,7 @@ import { AuthProvider } from '../providers/auth.provider'
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
       FirebaseConfigService,
-      UserProvider,
+      UserProvider, ProfileData,
       AuthProvider,
       DummyData]
 

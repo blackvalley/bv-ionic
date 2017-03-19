@@ -10,11 +10,14 @@ export class FirebaseConfigService {
     private database : firebase.database.Database
     private storage : firebase.storage.Storage
     private auth : firebase.auth.Auth
+    private userProfile: firebase.database.Reference;
+
     constructor(){
       this.configureApp()
       this.configureDatabase()
       this.configureStorage()
       this.configureAuth()
+
     }
     //configure app with our specific db config
     configureApp(){
@@ -44,4 +47,9 @@ export class FirebaseConfigService {
     getAuth() : firebase.auth.Auth{
       return this.auth
     }
+    //encapsulate Reference
+    getDatabaseReference() : firebase.database.Reference{
+        return this.userProfile
+    }
+  
 }
