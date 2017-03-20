@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { FirebaseConfigService } from '../core/service/service'
 import firebase from 'firebase'
@@ -21,9 +20,7 @@ export class ProfileData {
 
 
 constructor(private fire: FirebaseConfigService) {
- /**
- * Here we create the references I told you about 2 seconds ago 😛
- */
+
  this.currentUser = this.fire.getAuth().currentUser;
  this.userProfile = this.fire.getDatabase().ref('/users');
 

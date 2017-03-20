@@ -20,18 +20,14 @@ import { SignupPage } from '../pages/signup/signup'
 import { PwresetPage } from '../pages/pwreset/pwreset'
 import { AuthProvider } from '../providers/auth.provider'
 import { ProfileData } from '../providers/profile.data'
-
+import { EventData } from '../providers/event.provider'
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    FeedPage,
-    CommunityPage,
-    EventsPage,
+    MyApp, HomePage, FeedPage,
+    CommunityPage, EventsPage,
     ConnectionsPage,
-    ArticlePage,
-    CalendarPage,
+    ArticlePage, CalendarPage,
     ProfilePage,
     CommentsPage,
     SxswPage,
@@ -64,7 +60,7 @@ import { ProfileData } from '../providers/profile.data'
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
       FirebaseConfigService,
       UserProvider, ProfileData,
-      AuthProvider,
+      AuthProvider, EventData,
       DummyData]
 
 })
