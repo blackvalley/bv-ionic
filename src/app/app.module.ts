@@ -7,27 +7,34 @@ import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ProfilePage } from '../pages/profile/profile'
+import { FirebaseConfigService } from '../core/service/service'
+import { UserProvider } from '../providers/user.provider'
+import { DummyData } from '../providers/dummy.data'
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
-import { Data } from '../providers/data';
-
-// Import the AF2 Module
-import { AngularFireModule } from 'angularfire2';
-
-// AF2 Settings
+import { CommentsPage } from '../pages/comments/comments';
+import { SxswPage } from '../pages/sxsw/sxsw';
+import { LoginPage } from '../pages/login/login'
+import { SignupPage } from '../pages/signup/signup'
+import { PwresetPage } from '../pages/pwreset/pwreset'
+import { AuthProvider } from '../providers/auth.provider'
+import { ProfileData } from '../providers/profile.data'
+import { EventData } from '../providers/event.provider'
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    FeedPage,
-    CommunityPage,
-    EventsPage,
+    MyApp, HomePage, FeedPage,
+    CommunityPage, EventsPage,
     ConnectionsPage,
-    ArticlePage,
-    CalendarPage,
+    ArticlePage, CalendarPage,
     ProfilePage,
-    TabsPage
+    CommentsPage,
+    SxswPage,
+    TabsPage,
+    LoginPage,
+    SignupPage,
+    PwresetPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -42,8 +49,19 @@ import { AngularFireModule } from 'angularfire2';
     ConnectionsPage,
     ArticlePage,
     CalendarPage,
-    TabsPage
+    TabsPage,
+    CommentsPage,
+    SxswPage,
+    ProfilePage,
+    LoginPage,
+    SignupPage,
+    PwresetPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
+      FirebaseConfigService,
+      UserProvider, ProfileData,
+      AuthProvider, EventData,
+      DummyData]
+
 })
 export class AppModule {}

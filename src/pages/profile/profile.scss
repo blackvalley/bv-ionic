@@ -3,13 +3,14 @@ page-profile {
   ion-content {
           position: relative;
           background-color: white;
-          box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
           padding-top: 10px;
+          color: white;
 
         }
 
   #profile-card{
     margin-top: 150px;
+
 
   }
 
@@ -29,7 +30,6 @@ page-profile {
   top: 0px;
   left: 0px;
   z-index: -1;
-  box-shadow: inset 300px 40px 150px #000000;
 }
 
 #profile-info {
@@ -48,7 +48,7 @@ page-profile {
   min-height: 150px;
   margin-top: 70px;
   margin-left: 5px;
-  box-shadow: 5px 5px 4px #000000;
+
 
 }
 
@@ -57,6 +57,12 @@ page-profile {
   display: block;
   margin-top: 80px;
 
+}
+
+#profile-description{
+  p {
+    color: white;
+  }
 }
 
 
