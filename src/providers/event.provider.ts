@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { FirebaseConfigService } from '../core/service/service'
+// import { Http } from '@angular/http';
+// import 'rxjs/add/operator/map';
+// import { FirebaseConfigService } from '../core/service/service'
 
 
 
