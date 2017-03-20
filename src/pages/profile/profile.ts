@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { ProfileData } from '../../providers/profile.data'
-import { ConnectionsPage } from '../connections/connections';
+//import { ConnectionsPage } from '../connections/connections';
 import { AuthProvider } from '../../providers/auth.provider'
 import { LoginPage } from '../login/login';
 
