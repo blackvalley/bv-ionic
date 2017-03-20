@@ -3,7 +3,6 @@ import { NavController, NavParams, AlertController, LoadingController } from 'io
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth.provider';
 import { SignupPage } from '../signup/signup';
-import { HomePage } from '../home/home';
 import { PwresetPage } from '../pwreset/pwreset';
 /*
   Generated class for the Login page.
