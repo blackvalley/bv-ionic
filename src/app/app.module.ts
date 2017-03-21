@@ -18,9 +18,11 @@ import { SxswPage } from '../pages/sxsw/sxsw';
 import { LoginPage } from '../pages/login/login'
 import { SignupPage } from '../pages/signup/signup'
 import { PwresetPage } from '../pages/pwreset/pwreset'
+import { CreateEventPage } from '../pages/create-event/create-event';
 import { AuthProvider } from '../providers/auth.provider'
 import { ProfileData } from '../providers/profile.data'
 import { EventData } from '../providers/event.provider'
+
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { EventData } from '../providers/event.provider'
     CommunityPage, EventsPage,
     ConnectionsPage,
     ArticlePage, CalendarPage,
+    CreateEventPage,
     ProfilePage,
     CommentsPage,
     SxswPage,
@@ -49,6 +52,7 @@ import { EventData } from '../providers/event.provider'
     ConnectionsPage,
     ArticlePage,
     CalendarPage,
+    CreateEventPage,
     TabsPage,
     CommentsPage,
     SxswPage,

@@ -1,63 +1,124 @@
 page-feed {
 
+
   ion-title{
     margin-left: 50px;
   }
 
-  #feed {
+  #add-event{
     position: absolute;
     top: 0;
     right: 0;
-    left: 0;
-
-  }
-  #status {
-    background: none;
-    min-height: 30px;
-    color: #C6E947;
-    width: 250px;
-    margin-left: 80px;
-    margin-top: -60px;
-    font-size: 14px;
-
-
-
   }
 
-  #user-card{
-    border-radius: 10px;
-    border: 1px solid #000000;
-
-  }
-
-
-  #user-post {
-    min-height: 90px;
+  #event-card{
+    box-shadow: 0 0 3px 2px #000;
     background-color: lightgray;
+  }
+
+  #events-card-title{
+    color: #C6E947;
+    text-decoration: underline;
+
 
   }
 
-  #user-img {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    border-radius: 80px;
-    border: 3px solid #000000;
-    background-color: white;
-    width: 70px;
-    height: 60px;
+  #events-header {
+    background-color: black;
+    margin: -15px 0px -20px 0px;
+  }
+
+
+  #event-date{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: #C6E947;
+    margin: -10px 0px -10px -5px;
+    text-align: center;
+    background-color: none;
+
 
   }
 
-  #user-info {
-    position: absolute;
-    left: 90px;
-    top: 13px;
+  #card-header {
+    background-color: black;
   }
 
-  #user-btn {
-    position: absolute;
-    top: 55px;
+  #card-title {
+    color: #C6E947;
+    margin: -10px 10px -5px 10px;
+    text-decoration: underline;
   }
 
-}
+  #opp-referral {
+    margin: -5px 10px 0px 10px;
+  }
+  #card-sxsw {
+    box-shadow: 0 0 3px 2px #000;
+    border: 2px solid black;
+
+  }
+
+  #event-sxsw{
+    box-shadow: 0 0 3px 1px white;
+    border: 1px solid #515151;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: #C6E947;
+    margin: -10px 5px -10px -5px;
+    text-align: center;
+    background-color: none;
+
+  }
+  #header-sxsw {
+    background-color: black;
+    margin: -10px -25px -10px -20px;
+  }
+  #header-sxsw ion-item {
+    background-color: black;
+    margin: -5px 0px -10px;
+
+  }
+  #header-sxsw p {
+    margin: 5px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+  }
+
+  #card-sxsw {
+    background-color: black;
+
+
+  }
+  #card-sxsw ion-col {
+    border-radius: 2px;
+    background-color: black;
+    padding: 0px;
+    margin: 5px;
+  }
+  #card-sxsw ion-row {
+    text-align: center;
+  }
+
+  #card-sxsw button {
+    padding: 15px 60px;
+    color: #C6E947;
+    text-align: center;
+    box-shadow: 0 0 3px 1px white;
+    border: 1px solid #515151;
+    width: 100px;
+
+
+  }
+
+  #title-sxsw {
+    color: #C6E947;
+    margin: 5px 0px 0px 10px;
+    text-decoration: underline;
+  }
+
+
+
+  }

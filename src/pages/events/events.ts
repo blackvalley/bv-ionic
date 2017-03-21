@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { FormControl } from '@angular/forms';
-import { DummyData } from '../../providers/dummy.data';
-import 'rxjs/add/operator/debounceTime';
+import { ModalController } from 'ionic-angular';
+import { CreateEventPage } from '../create-event/create-event';
 
 
 @Component({
@@ -11,36 +9,13 @@ import 'rxjs/add/operator/debounceTime';
 })
 export class EventsPage {
 
-searchTerm: string = '';
-  searchControl: FormControl;
-  items: any;
-  searching: any = false;
-
-  constructor(public navCtrl: NavController, public dataService: DummyData) {
-      this.searchControl = new FormControl();
-  }
-
-  ionViewDidLoad() {
-
-      this.setFilteredItems();
-
-      this.searchControl.valueChanges.debounceTime(100).subscribe(search => {
-
-          this.searching = false;
-          this.setFilteredItems();
-
-      });
-
+  constructor(private modalCtrl: ModalController) {
 
   }
 
-  onSearchInput(){
-      this.searching = true;
+  addEvent(){
+    let eventModal = this.modalCtrl.create(CreateEventPage)
+    eventModal.present()
   }
 
-  setFilteredItems() {
-
-      this.items = this.dataService.filterItems(this.searchTerm);
-
-  }
 }
