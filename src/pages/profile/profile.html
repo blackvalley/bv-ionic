@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>Profile</ion-title>
+  <ion-navbar>
+    <img src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/bv-logo.png?alt=media&token=edcd44fd-6479-4764-89ff-3df661724f92" width="80" height="40"/>
     <ion-buttons end>
       <button ion-button icon-only (click)="logOut()">
         <ion-icon name="log-out"></ion-icon>
@@ -11,6 +11,16 @@
 
 <ion-content padding>
   <ion-list>
+  <div id="profile-card">
+  <ion-item id="profile-back">
+    <img id="profile-img" src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/BlackValley-2.jpg?alt=media&token=425be727-9c17-45d2-a824-8a9038a9dcf7" alt="avatar">
+    <img id="back-img" src="https://firebasestorage.googleapis.com/v0/b/bv-ionic.appspot.com/o/default%20BG.jpg?alt=media&token=890ddab2-35a4-4edd-9e1c-9abd040d20d5">
+    <h2 id="profile-name" *ngIf="userProfile?.firstName || userProfile?.lastName">
+      <b>{{userProfile?.firstName}} {{userProfile?.lastName}}</b></h2>
+  </ion-item>
+  </div>
+
+<div id="edits">
     <ion-list-header>
       Personal Information
     </ion-list-header>
@@ -71,5 +81,6 @@
         </ion-row>
       </ion-grid>
     </ion-item>
+  </div>
   </ion-list>
 </ion-content>

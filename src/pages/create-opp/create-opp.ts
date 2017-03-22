@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
-import { EventData } from '../../providers/event.provider'
 
 
 @Component({
-  selector: 'page-create-event',
-  templateUrl: 'create-event.html'
+  selector: 'page-create-opp',
+  templateUrl: 'create-opp.html'
 })
-export class CreateEventPage {
+export class CreateOppPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private eventData: EventData, private viewCtrl: ViewController) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController) {}
 
 
   // //uses Event provider to create an event
@@ -21,7 +20,7 @@ export class CreateEventPage {
   //         });
   //     }
 
-  closeEvent(){
+  closeOpp(){
     this.viewCtrl.dismiss();
 
   }

@@ -6,12 +6,14 @@
 -->
 <ion-header>
 
-  <ion-toolbar>
+  <ion-navbar>
     <ion-title>Comments</ion-title>
-    <ion-buttons start (click)="closecomments">
-      <button><ion-icon name="md-close" background-color="black"></ion-icon></button>
+    <ion-buttons>
+      <button ion-button icon-only (click)="closeComments()">
+        <ion-icon name="close"></ion-icon>
+        </button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-navbar>
 
 </ion-header>
 
