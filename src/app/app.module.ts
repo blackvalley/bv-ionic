@@ -2,7 +2,6 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { FeedPage } from '../pages/feed/feed';
 import { CommunityPage } from '../pages/community/community';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
@@ -11,14 +10,14 @@ import { ProfilePage } from '../pages/profile/profile'
 import { FirebaseConfigService } from '../core/service/service'
 import { UserProvider } from '../providers/user.provider'
 import { DummyData } from '../providers/dummy.data'
-import { CalendarPage } from '../pages/calendar/calendar';
 import { ArticlePage } from '../pages/article/article';
 import { CommentsPage } from '../pages/comments/comments';
-import { SxswPage } from '../pages/sxsw/sxsw';
+import { OpportunitiesPage } from '../pages/opportunities/opportunities';
 import { LoginPage } from '../pages/login/login'
 import { SignupPage } from '../pages/signup/signup'
 import { PwresetPage } from '../pages/pwreset/pwreset'
 import { CreateEventPage } from '../pages/create-event/create-event';
+import { CreateOppPage } from '../pages/create-opp/create-opp';
 import { AuthProvider } from '../providers/auth.provider'
 import { ProfileData } from '../providers/profile.data'
 import { EventData } from '../providers/event.provider'
@@ -26,14 +25,15 @@ import { EventData } from '../providers/event.provider'
 
 @NgModule({
   declarations: [
-    MyApp, HomePage, FeedPage,
+    MyApp, HomePage,
     CommunityPage, EventsPage,
     ConnectionsPage,
-    ArticlePage, CalendarPage,
+    ArticlePage,
     CreateEventPage,
+    CreateOppPage,
     ProfilePage,
     CommentsPage,
-    SxswPage,
+    OpportunitiesPage,
     TabsPage,
     LoginPage,
     SignupPage,
@@ -46,16 +46,15 @@ import { EventData } from '../providers/event.provider'
   entryComponents: [
     MyApp,
     HomePage,
-    FeedPage,
     CommunityPage,
     EventsPage,
     ConnectionsPage,
     ArticlePage,
-    CalendarPage,
     CreateEventPage,
+    CreateOppPage,
     TabsPage,
     CommentsPage,
-    SxswPage,
+    OpportunitiesPage,
     ProfilePage,
     LoginPage,
     SignupPage,

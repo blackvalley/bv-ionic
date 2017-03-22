@@ -1,3 +1,45 @@
 page-opportunities {
 
+
+  #opp-card{
+    box-shadow: 0 0 3px 2px #000;
+    background-color: lightgray;
+  }
+
+  #opp-card-title{
+    color: #C6E947;
+    text-decoration: underline;
+
+  }
+
+
+  #opp-date{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: #C6E947;
+    margin: -10px 0px -10px -5px;
+    text-align: center;
+    background-color: none;
+
+
+  }
+
+  #card-header {
+    background-color: black;
+  }
+
+  #card-title {
+    color: #C6E947;
+    margin: -10px 10px -5px 10px;
+    text-decoration: underline;
+  }
+
+  #opp-referral {
+    margin: -5px 10px 0px 10px;
+  }
+
+
+
+
 }

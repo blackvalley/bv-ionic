@@ -1,18 +1,42 @@
-<!--
-  Generated template for the Opportunities page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>opportunities</ion-title>
-  </ion-navbar>
-
+  <ion-buttons end id="add-opp" (click)="addOpp()">
+    <button ion-button icon-only clear >
+      <ion-icon name="create"></ion-icon>
+      </button>
+  </ion-buttons>
+  <ion-title> Oppourtunities</ion-title>
+    <img src="https://firebasestorage.googleapis.com/v0/b/bvweb-5da6d.appspot.com/o/bv-logo.png?alt=media&token=edcd44fd-6479-4764-89ff-3df661724f92" width="80" height="40"/>
+    </ion-navbar>
 </ion-header>
 
 
+
 <ion-content padding>
+
+
+      <ion-card id="opp-card">
+        <img src="https://www.edx.org/sites/default/files/microsoft_banner1200x536.png"/>
+        <ion-item id="card-header">
+          <div id="event-date" item-left>
+          <h3>Feb</h3>
+          <h4>14</h4>
+        </div>
+          <div item-right>
+          <ion-card-title id="card-title">AR Internship</ion-card-title>
+          <p id="opp-referral"><a href="">Keisha Ebbesen</a> Shared this opportunity with you</p>
+        </div>
+        </ion-item>
+
+        <ion-card-content>
+          <p>Micrsoft is looking for interns interested in AR. Must know Python and Java. Message me if interested</p>
+        </ion-card-content>
+
+
+      </ion-card>
+
+
+
+
 
 </ion-content>
