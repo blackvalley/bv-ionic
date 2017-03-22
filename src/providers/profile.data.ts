@@ -55,6 +55,14 @@ updateDOB(birthDate: string): firebase.Promise<any> {
  });
 }
 
+updateInfo(college: string, location: string, employment: string): firebase.Promise<any> {
+ return this.userProfile.child(this.currentUser.uid).update({
+   college: college,
+   location: location,
+   employment: employment,
+ });
+}
+
 /**
 * This is were things get trickier, this one is taking the user's email and first it's calling the
 * this.currentUser auth reference to call it's updateEmail() function, it's very important that you

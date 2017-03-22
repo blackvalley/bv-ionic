@@ -4,13 +4,12 @@ import { ProfileData } from '../../providers/profile.data'
 //import { ConnectionsPage } from '../connections/connections';
 import { AuthProvider } from '../../providers/auth.provider'
 import { LoginPage } from '../login/login';
-import { EditProfilePage } from '../edit-profile/edit-profile'
 
 @Component({
-  selector: 'page-profile',
-  templateUrl: 'profile.html'
+  selector: 'page-edit-profile',
+  templateUrl: 'edit-profile.html'
 })
-export class ProfilePage {
+export class EditProfilePage {
     private profileData
     private userProfile: any;
     private birthDate: string;
@@ -25,10 +24,6 @@ export class ProfilePage {
         this.birthDate = this.userProfile.birthDate;
             });
         }
-
-    editProfile(){
-      this.nav.push(EditProfilePage)
-    }
 
     logOut(): void {
       this.authData.logoutUser().then(() => {
