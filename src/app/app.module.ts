@@ -17,6 +17,7 @@ import { LoginPage } from '../pages/login/login'
 import { SignupPage } from '../pages/signup/signup'
 import { PwresetPage } from '../pages/pwreset/pwreset'
 import { CreateEventPage } from '../pages/create-event/create-event';
+import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { CreateOppPage } from '../pages/create-opp/create-opp';
 import { AuthProvider } from '../providers/auth.provider'
 import { ProfileData } from '../providers/profile.data'
@@ -30,6 +31,7 @@ import { EventData } from '../providers/event.provider'
     ConnectionsPage,
     ArticlePage,
     CreateEventPage,
+    EditProfilePage,
     CreateOppPage,
     ProfilePage,
     CommentsPage,
@@ -51,6 +53,7 @@ import { EventData } from '../providers/event.provider'
     ConnectionsPage,
     ArticlePage,
     CreateEventPage,
+    EditProfilePage,
     CreateOppPage,
     TabsPage,
     CommentsPage,
