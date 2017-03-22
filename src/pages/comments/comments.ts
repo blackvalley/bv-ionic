@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController, NavParams} from 'ionic-angular';
-
-
 import { ArticlePage } from '../article/article';
 
 /*
@@ -23,7 +21,7 @@ export class CommentsPage {
     console.log('ionViewDidLoad CommentsPage');
   }
 
-  closecomments() {
+  closeComments(){
     this.viewCtrl.dismiss();
   }
 
