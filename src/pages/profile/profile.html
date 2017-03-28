@@ -18,7 +18,7 @@
     <h2 id="profile-name" *ngIf="userProfile?.firstName || userProfile?.lastName">
       <b>{{userProfile?.firstName}} {{userProfile?.lastName}}</b></h2>
       <p>{{userProfile?.college}}  {{userProfile?.location}}</p>
-      <ion-buttons id="settings"><button ion-button icon-only black (click)="editProfile()"><ion-icon name="code" color="white" ></ion-icon></button>
+      <ion-buttons><button (click)="editProfile()"><ion-icon name="paper"></ion-icon></button>
       </ion-buttons>
   </ion-item>
   </div>
