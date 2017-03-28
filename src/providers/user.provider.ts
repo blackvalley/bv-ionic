@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core'
-
-import { FirebaseConfigService } from '../core/service/service'
-
 import { Observable } from 'rxjs/Observable'
+import { FirebaseConfigService } from '../core/service/service'
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class UserProvider{
 
-    private userdb = this.fire.getDatabase().ref('/students')
+    private userdb = this.fire.getDatabase().ref('/users')
 
     constructor (private fire: FirebaseConfigService){}
     //create listener for users in the database

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Chat Rooms</ion-title>
+    <ion-buttons end id="create-chat">
+      <button ion-button icon-only clear (click)="createChat()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+<ion-list >
+  <button ion-item *ngFor="let user of users" (click)="userSelected(user)">
+    {{ user.email }}
+  </button>
+</ion-list>
+</ion-content>

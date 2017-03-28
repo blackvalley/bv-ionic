@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
 import { EventsPage } from '../events/events';
-import { CommunityPage } from '../community/community';
+import { MultiChatPage } from '../multichat/multichat';
 import { OpportunitiesPage } from '../opportunities/opportunities';
 import { ProfilePage } from '../profile/profile';
 
@@ -15,7 +15,7 @@ export class TabsPage {
   // should be each tab's root Page
   tab1Root: any = HomePage;
   tab2Root: any = OpportunitiesPage;
-  tab3Root: any = CommunityPage;
+  tab3Root: any = MultiChatPage;
   tab4Root: any = EventsPage;
   tab5Root: any = ProfilePage;
 

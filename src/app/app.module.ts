@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { CommunityPage } from '../pages/community/community';
+import { MultiChatPage } from '../pages/multichat/multichat';
 import { EventsPage } from '../pages/events/events';
 import { ConnectionsPage } from '../pages/connections/connections';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -22,24 +22,30 @@ import { CreateOppPage } from '../pages/create-opp/create-opp';
 import { AuthProvider } from '../providers/auth.provider'
 import { ProfileData } from '../providers/profile.data'
 import { EventData } from '../providers/event.provider'
-
+import { EventDetailPage } from '../pages/event-detail/event-detail'
+import { ArticleProvider } from '../providers/article-provider'
+import { CreateChatPage } from '../pages/create-chat/create-chat'
 
 @NgModule({
   declarations: [
-    MyApp, HomePage,
-    CommunityPage, EventsPage,
-    ConnectionsPage,
+    MyApp,
+    HomePage,
     ArticlePage,
-    CreateEventPage,
-    EditProfilePage,
-    CreateOppPage,
-    ProfilePage,
     CommentsPage,
-    OpportunitiesPage,
-    TabsPage,
+    MultiChatPage,
+    ConnectionsPage,
+    EventDetailPage,
+    EventsPage,
     LoginPage,
+    OpportunitiesPage,
+    ProfilePage,
+    PwresetPage,
     SignupPage,
-    PwresetPage
+    TabsPage,
+    CreateEventPage,
+    CreateOppPage,
+    CreateChatPage,
+    EditProfilePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -48,26 +54,29 @@ import { EventData } from '../providers/event.provider'
   entryComponents: [
     MyApp,
     HomePage,
-    CommunityPage,
-    EventsPage,
-    ConnectionsPage,
     ArticlePage,
-    CreateEventPage,
-    EditProfilePage,
-    CreateOppPage,
-    TabsPage,
     CommentsPage,
+    MultiChatPage,
+    ConnectionsPage,
+    EventDetailPage,
+    EventsPage,
+    LoginPage,
     OpportunitiesPage,
     ProfilePage,
-    LoginPage,
+    PwresetPage,
     SignupPage,
-    PwresetPage
+    TabsPage,
+    CreateEventPage,
+    CreateOppPage,
+    CreateChatPage,
+    EditProfilePage
+
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
       FirebaseConfigService,
       UserProvider, ProfileData,
       AuthProvider, EventData,
-      DummyData]
+      DummyData, ArticleProvider]
 
 })
 export class AppModule {}

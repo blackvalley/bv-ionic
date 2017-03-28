@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController, AlertController } from 'ionic-angular';
-//import { AuthProvider } from '../../providers/auth.provider'
+import { ArticleProvider } from '../../providers/article-provider'
 import { ArticlePage } from '../article/article';
 import { CommentsPage } from '../comments/comments';
 //import { LoginPage } from '../login/login'
@@ -9,22 +9,30 @@ import { CommentsPage } from '../comments/comments';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  private articles:any[]
   constructor(public navCtrl: NavController, public modalCtrl: ModalController,
-   alert:AlertController) {
-
+   alert:AlertController, private articledb: ArticleProvider) {
+     this.articles = []
+     this.getAddedArticles()
   }
   article(){
     this.navCtrl.push(ArticlePage);
   }
-  // logOut(){
-  // this.authData.logoutUser().then(() => {
-  //   this.navCtrl.setRoot(LoginPage);
-  // });
-  // }
+
   comments(){
     let commentsModal = this.modalCtrl.create(CommentsPage);
     commentsModal.present();
   }
+  getAddedArticles(){
+    this.articledb.getAddedArticles()
+          .subscribe(article=> {
+            console.log(article)
+            this.articles.push(article)
+          },
+          err =>{
+             console.error("Unable to add user - ", err)
+          })
+}
+
 
 }
