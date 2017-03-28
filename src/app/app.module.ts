@@ -19,6 +19,7 @@ import { PwresetPage } from '../pages/pwreset/pwreset'
 import { CreateEventPage } from '../pages/create-event/create-event';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { CreateOppPage } from '../pages/create-opp/create-opp';
+import { OppDetailPage } from '../pages/opp-detail/opp-detail'
 import { AuthProvider } from '../providers/auth.provider'
 import { ProfileData } from '../providers/profile.data'
 import { EventData } from '../providers/event.provider'
@@ -38,6 +39,7 @@ import { CreateChatPage } from '../pages/create-chat/create-chat'
     EventsPage,
     LoginPage,
     OpportunitiesPage,
+    OppDetailPage,
     ProfilePage,
     PwresetPage,
     SignupPage,
@@ -62,6 +64,7 @@ import { CreateChatPage } from '../pages/create-chat/create-chat'
     EventsPage,
     LoginPage,
     OpportunitiesPage,
+    OppDetailPage,
     ProfilePage,
     PwresetPage,
     SignupPage,
