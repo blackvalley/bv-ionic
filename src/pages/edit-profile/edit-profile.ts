@@ -25,6 +25,11 @@ export class EditProfilePage {
             });
         }
 
+    logOut(): void {
+      this.authData.logoutUser().then(() => {
+      this.nav.setRoot(LoginPage);
+          });
+      }
       //creates prompt to edit your name.
       updateName(): void {
           let alert = this.alertCtrl.create({

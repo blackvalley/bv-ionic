@@ -3,13 +3,14 @@
 
 <ion-content padding center text-center id="login-page">
 
-  <div id="login-card">
+  <ion-card id="login-card">
+
   <img src="https://firebasestorage.googleapis.com/v0/b/bv-ionic.appspot.com/o/IMG_3535.JPG?alt=media&token=f7a2c39b-dfe9-4068-8105-5e2976314e4c">
 
-  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate id="login-form">
 
-    <ion-card id="login-form">
-    <ion-item>
+
+    <ion-item id="emailField">
       <ion-label stacked>Email</ion-label>
       <ion-input #email formControlName="email" type="email" placeholder="Your email address"
         [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
@@ -19,7 +20,7 @@
       <p>Please enter a valid email.</p>
     </ion-item>
 
-    <ion-item>
+    <ion-item id="pwField">
       <ion-label stacked>Password</ion-label>
       <ion-input #password formControlName="password" type="password" placeholder="Your password"
         [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
@@ -28,16 +29,16 @@
       *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
       <p>Your password needs more than 6 characters.</p>
     </ion-item>
-  </ion-card>
 
-    <button ion-button type="submit" id="connect-btn">
+
+    <button ion-button type="submit">
       Connect
     </button>
+
+
   </form>
 
-
-
-
+</ion-card>
     <button ion-button block clear (click)="goToSignup()" id="buttons">
       Join the Network
     </button>
@@ -45,7 +46,7 @@
     <button ion-button block clear (click)="goToResetPassword()" id="buttons">
       I forgot my password
     </button>
-</div>
+
 
 
 </ion-content>

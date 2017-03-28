@@ -67,10 +67,11 @@
             <ion-col width-50>
               College
             </ion-col>
-            <ion-col *ngIf="userProfile?.college">
+            <ion-col *ngIf="userProfile?.college || userProfile?.location || userProfile?.employment">
               {{userProfile?.college}}
             </ion-col>
             <ion-col class="placeholder-profile" *ngIf="!userProfile?.college">
+
               <span>
                 Tap here to edit.
               </span>

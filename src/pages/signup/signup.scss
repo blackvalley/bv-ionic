@@ -1,15 +1,15 @@
 page-signup {
 
-  #signup-page{
-    background: url("https://firebasestorage.googleapis.com/v0/b/bv-ionic.appspot.com/o/imageedit_10_4745385516.gif?alt=media&token=407f2ed2-8c03-4c01-a4b6-1bd3331ee22d") center;
-    background-size: auto 100%;
+  #signup-card{
+    background-color: #000000;
   }
 
-  #signup-page ion-item{
+  #signup-card ion-item{
     background-color: transparent;
     color: #C6E947;
   }
   #signup-form ion-input{
+    background-color: #000000;
   }
 
   #signup-card ion-datetime{
@@ -19,8 +19,8 @@ page-signup {
     display: block;
     background-color: transparent;
     border-radius: 15px;
-    border: 2px solid #C6E947;
-    color: #C6E947;
+    border: 2px solid #000000;
+    color: #000000;
     margin: 10px auto;
   }
 
