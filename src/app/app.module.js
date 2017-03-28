@@ -23,8 +23,10 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { PwresetPage } from '../pages/pwreset/pwreset';
 import { CreateEventPage } from '../pages/create-event/create-event';
+import { EventDetailPage } from '../pages/event-detail/event-detail'
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { CreateOppPage } from '../pages/create-opp/create-opp';
+import { OppDetailPage } from '../pages/opp-detail/opp-detail'
 import { AuthProvider } from '../providers/auth.provider';
 import { ProfileData } from '../providers/profile.data';
 import { EventData } from '../providers/event.provider';
@@ -43,9 +45,11 @@ AppModule = __decorate([
             CreateEventPage,
             EditProfilePage,
             CreateOppPage,
+            OppDetailPage,
             ProfilePage,
             CommentsPage,
             OpportunitiesPage,
+            EventDetailPage,
             TabsPage,
             LoginPage,
             SignupPage,
@@ -63,11 +67,13 @@ AppModule = __decorate([
             ConnectionsPage,
             ArticlePage,
             CreateEventPage,
+            OppDetailPage,
             EditProfilePage,
             CreateOppPage,
             TabsPage,
             CommentsPage,
             OpportunitiesPage,
+            EventDetailPage,
             ProfilePage,
             LoginPage,
             SignupPage,
