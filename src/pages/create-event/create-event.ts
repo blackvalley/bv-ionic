@@ -8,6 +8,11 @@ import { EventData } from '../../providers/event.provider'
   templateUrl: 'create-event.html'
 })
 export class CreateEventPage {
+  public event = {
+    month: '1990-02-19',
+    timeStarts: '07:43',
+    timeEnds: '1990-02-20'
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private eventData: EventData, private viewCtrl: ViewController) {}
 
